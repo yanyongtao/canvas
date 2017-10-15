@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/hitPix.js"></script>
+    <script src="js/game.js"></script>
+
+    <style>
+        html,body{
+           padding: 0;margin: 0;
+            width: 100%;height: 100%;
+            overflow: hidden;
+            background:#000;
+        }
+        canvas{
+            background: url("images/5.png") repeat-x;
+        }
+
+
+        .endx{
+            width:300px;height:180px;background:#000000;position:absolute;
+            left:0;top:0;bottom:0;right:0;margin:auto;display:none;
+        }
+        .endx_game{
+            width:100%;height:100px;line-height:100px;text-align:center;
+            font-size:24px;color:#fff;font-family:"微软雅黑";margin-bottom:20px;
+            background: url("images/gameover.png")no-repeat center;
+        }
+        .endx_game_go{
+            width:100px;height:40px;border:1px solid #fff;float:left;
+            margin-left:25px;line-height:40px;
+            color: #ffffff;text-align:center;cursor:pointer;font-family:"微软雅黑";
+        }
+        .endx_game_go:hover{
+            animation:jzp 1s linear;
+        }
+        .endx_game_end:hover{
+            animation:jzp 1s linear;
+        }
+        .endx_game_end{
+            width:100px;height:40px;border:1px solid #fff;float:right;
+            margin-right:25px;line-height:40px;cursor:pointer;font-family:"微软雅黑";
+            color: #ffffff;text-align:center;
+        }
+        @keyframes jzp{
+            0%{
+                opacity:0;
+                transform:scale(0.5,0.5);
+                transform:rotate(0deg);
+            }
+            25%{
+                transform:rotate(90deg);
+            }
+            50%{
+                transform:rotate(180deg);
+            }
+            75%{
+                transform:rotate(270deg);
+            }
+            100%{
+                opacity:1;
+                transform:scale(1,1);
+                ransform:rotate(360deg);
+            }
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas=document.querySelector("canvas");
+            var cobj=canvas.getContext("2d");
+            window.onresize=function(){
+                canvas.width=document.documentElement.clientWidth;
+                canvas.height=document.documentElement.clientHeight;
+            }
+            window.onresize();
+
+
+
+            /*程序运行*/
+            var runsImg=document.querySelectorAll(".run");
+            var jumpsImg=document.querySelectorAll(".jump");
+            var hinderImg=document.querySelectorAll(".hinder");
+            var gameObj=new game(canvas,cobj,runsImg,jumpsImg,hinderImg);
+            gameObj.play();
+        }
+    </script>
+</head>
+<body>
+<canvas>
+    您的浏览器不支持canvas,请升级浏览器
+</canvas>
+<img src="images/b1.png" alt=""class="run" hidden>
+<img src="images/b2.png" alt=""class="run" hidden>
+<img src="images/b3.png" alt=""class="run" hidden>
+<img src="images/b4.png" alt=""class="run" hidden>
+<img src="images/b5.png" alt=""class="run" hidden>
+<img src="images/b6.png" alt=""class="run" hidden>
+<img src="images/b7.png" alt=""class="run" hidden>
+<img src="images/b8.png" alt=""class="run" hidden>
+
+<img src="images/b10.png" alt=""class="jump" hidden>
+
+
+
+<!--<img src="images/run1.png" alt=""class="run" hidden>-->
+<!--<img src="images/run2.png" alt=""class="run" hidden>-->
+<!--<img src="images/run3.png" alt=""class="run" hidden>-->
+<!--<img src="images/run4.png" alt=""class="run" hidden>-->
+<!--<img src="images/run5.png" alt=""class="run" hidden>-->
+<!--<img src="images/run6.png" alt=""class="run" hidden>-->
+<!--<img src="images/run7.png" alt=""class="run" hidden>-->
+
+<!--<img src="images/jump3.png" alt=""class="jump" hidden>-->
+
+
+
+<img src="images/boom.png" alt="" class="hinder" hidden>
+<img src="images/chick.png" alt="" class="hinder" hidden>
+<img src="images/egg.png" alt="" class="hinder" hidden>
+<img src="images/flow.png" alt="" class="hinder" hidden>
+<img src="images/grass.png" alt="" class="hinder" hidden>
+<img src="images/stone.png" alt="" class="hinder" hidden>
+<img src="images/tree.png" alt="" class="hinder" hidden>
+
+
+<div class="endx">
+    <div class="endx_game"></div>
+    <div class="endx_game_go">从新开始</div>
+    <div class="endx_game_end">退出游戏</div>
+</div>
+
+
+</body>
+</html>

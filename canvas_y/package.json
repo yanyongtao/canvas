@@ -1,0 +1,14 @@
+{
+  "name": "canvas_y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"browser-sync start --server --files *.*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

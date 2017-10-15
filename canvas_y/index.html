@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/hitPix.js"></script>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+        }
+        canvas{
+            background: #eee;
+        }
+    </style>
+    <!--<script>-->
+        <!--window.onload=function () {-->
+<!--//            获取canvas-->
+            <!--var canvas = document.querySelector("canvas");-->
+<!--//            获取画布绘图环境（画笔）-->
+            <!--var cobj = canvas.getContext("2d");-->
+            <!--cobj.beginPath(); //开启路径-->
+            <!--cobj.moveTo(50,50); //定义第一个点的位置-->
+            <!--cobj.lineTo(150,150); //定义目标点的位置和直线路径-->
+            <!--cobj.lineTo(300,50)-->
+            <!--cobj.lineTo(150,0)-->
+            <!--cobj.lineTo(50,50)-->
+            <!--cobj.stroke(); //绘制路径-->
+
+
+            <!--cobj.beginPath();-->
+            <!--cobj.fillStyle = "#fff";-->
+<!--//            圆心的left top 半径  起始角  结束角  顺（逆）时针-->
+            <!--cobj.arc(50,50,20,0,Math.PI*2,true)-->
+            <!--cobj.closePath()-->
+            <!--cobj.fill()-->
+
+
+            <!--cobj.beginPath();-->
+            <!--cobj.fillStyle = "salmon";-->
+<!--//            矩形的left  top  width  height-->
+            <!--cobj.rect(50,50,200,20);-->
+            <!--cobj.closePath();-->
+            <!--cobj.fill()-->
+
+
+<!--//            清空给定矩形内的指定像素-->
+<!--//            left top  width  right-->
+            <!--cobj.clearRect(100,50,30,30)-->
+        <!--}-->
+    <!--</script>-->
+    <script>
+        window.onload=function () {
+//            var canvas = document.querySelector("canvas");
+//            var cobj = canvas.getContext("2d");
+//            window.onresize=function () {
+//                canvas.width=document.documentElement.clientWidth;
+//                canvas.height=document.documentElement.clientHeight;
+//            }
+//            window.onresize();
+
+//            var yytObj = new yyt(cobj);
+//            yytObj.go();
+        }
+    </script>
+</head>
+<body>
+<canvas>
+    您的浏览器不支持canvas，请升级浏览器
+</canvas>
+</body>
+</html>
